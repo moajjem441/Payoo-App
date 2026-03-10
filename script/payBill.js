@@ -1,49 +1,46 @@
-document.getElementById('pay-bill-btn').addEventListener('click',()=>{
+document.getElementById('pay-bill-btn').addEventListener('click', () => {
 
 
-    const selectedInstitude=getValueFromInput("select-institude");
-    
-    if (selectedInstitude ==='Select back')
-    {
+    const selectedInstitude = getValueFromInput("select-institude");
+
+    if (selectedInstitude === 'Select back') {
         alert("Institude not select yet. Please select institude");
-        return ;
+        return;
     }
 
-    const billerAccountNum=getValueFromInput("biller-account-number");
-    
-    if(billerAccountNum.length !== 11)
-    {
+    const billerAccountNum = getValueFromInput("biller-account-number");
+
+    if (billerAccountNum.length !== 11) {
         alert("Ivalid Biller Account Number");
-        return ;
+        return;
     }
 
-    const amountToPay=getValueFromInput("amount-to-pay");
+    const amountToPay = getValueFromInput("amount-to-pay");
 
-    const currentBalance=getBalance();
+    const currentBalance = getBalance();
 
-    const newBalance=currentBalance - Number(amountToPay);
+    const newBalance = currentBalance - Number(amountToPay);
 
-    if(newBalance < 0)
-    {
+    if (newBalance < 0) {
         alert("Invalid amount to pay");
         return;
     }
 
-    const pin=getValueFromInput("biller-pin");
+    const pin = getValueFromInput("biller-pin");
 
-    if(pin==='1234'){
+    if (pin === '1234') {
         alert(`${amountToPay}$ paid successfully to ${selectedInstitude} 
             at ${Date()}`);
 
-             setNewBalance(newBalance);
+        setNewBalance(newBalance);
 
 
-            const history=document.getElementById('history-container');
+        const history = document.getElementById('history-container');
 
-            const div=document.createElement('div');
+        const div = document.createElement('div');
 
 
-            div.innerHTML=`
+        div.innerHTML = `
     
          <div class="card bg-base-100 mb-5  flex flex-row  items-center gap-3 rounded-2xl p-4">
               <div class="img bg-gray-300 w-[120px] h-[80px] rounded-full p-4 flex justify-center items-center">
@@ -60,14 +57,14 @@ document.getElementById('pay-bill-btn').addEventListener('click',()=>{
     
     `
 
-    history.append(div);
+        history.append(div);
 
 
-            
+
 
     }
 
-    else{
+    else {
         alert("Invalid Pin");
     }
 

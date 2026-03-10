@@ -1,20 +1,18 @@
 
 // getValueFromInput
 
-function getValueFromInput(id)
-{
-    const input=document.getElementById(id);
-    const value=input.value;
+function getValueFromInput(id) {
+    const input = document.getElementById(id);
+    const value = input.value;
     return value;
 }
 
 
 //getBalance
 
-function getBalance()
-{
-   const currentBalance=document.getElementById("balance");
-    const balance=currentBalance.innerText;
+function getBalance() {
+    const currentBalance = document.getElementById("balance");
+    const balance = currentBalance.innerText;
     return Number(balance);
 }
 
@@ -22,24 +20,23 @@ function getBalance()
 
 //setBalance
 
-function setNewBalance(newBalance){
-    const currentBalance=document.getElementById("balance");
-    currentBalance.innerText=newBalance;
+function setNewBalance(newBalance) {
+    const currentBalance = document.getElementById("balance");
+    currentBalance.innerText = newBalance;
 }
 
 
 
 //showOnly()
 
-function showOnly(id)
-{
-    const transaction=document.getElementById("transaction-histoty");
-    const addMoney=document.getElementById("add-money");
-    const cashout=document.getElementById("cashout");
-    const transferMoney=document.getElementById("transfer-money"); 
-    const getBonus=document.getElementById("get-bonus-section"); 
-    const payBill=document.getElementById("Pay-bill"); 
-    
+function showOnly(id) {
+    const transaction = document.getElementById("transaction-histoty");
+    const addMoney = document.getElementById("add-money");
+    const cashout = document.getElementById("cashout");
+    const transferMoney = document.getElementById("transfer-money");
+    const getBonus = document.getElementById("get-bonus-section");
+    const payBill = document.getElementById("Pay-bill");
+
 
 
     addMoney.classList.add("hidden");
@@ -51,9 +48,9 @@ function showOnly(id)
 
 
 
-    const selected=document.getElementById(id);
+    const selected = document.getElementById(id);
     selected.classList.remove("hidden");
-    
+
 
 
 }

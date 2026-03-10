@@ -70,10 +70,10 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
             at ${Date()}
             `);
 
-         setNewBalance(newBalance);
+        setNewBalance(newBalance);
 
         const history = document.getElementById("history-container");
-       
+
         const div = document.createElement("div");
 
         div.innerHTML = `

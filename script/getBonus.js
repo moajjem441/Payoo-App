@@ -1,32 +1,31 @@
 
-isCoupon=false
+isCoupon = false
 
-document.getElementById("bonus-btn").addEventListener('click',()=>{
+document.getElementById("bonus-btn").addEventListener('click', () => {
 
 
-   const coupon=getValueFromInput('user-coupon');
-   console.log(coupon)
+  const coupon = getValueFromInput('user-coupon');
+  console.log(coupon)
 
-   if(isCoupon){
-     alert("Already You have Used this coupon");
-     return ;
-   }
+  if (isCoupon) {
+    alert("Already You have Used this coupon");
+    return;
+  }
 
-   const balance=getBalance();
+  const balance = getBalance();
 
-   const newBalance=balance + Number(500);
+  const newBalance = balance + Number(500);
 
-   if(coupon==='naky')
-   {
+  if (coupon === 'naky') {
     alert(`Congratualaitons! You got 500 $ at ${Date()} `)
-     
+
     setNewBalance(newBalance);
 
-    const container=document.getElementById('history-container');
+    const container = document.getElementById('history-container');
 
-    const div=document.createElement('div');
+    const div = document.createElement('div');
 
-    div.innerHTML=`
+    div.innerHTML = `
     
     <div class="card bg-base-100 mb-5  flex flex-row  items-center gap-3 rounded-2xl p-4">
               <div class="img bg-gray-300 w-[120px] h-[80px] rounded-full p-4 flex justify-center items-center">
@@ -43,13 +42,13 @@ document.getElementById("bonus-btn").addEventListener('click',()=>{
     
     `
     container.append(div);
-    isCoupon=true;
+    isCoupon = true;
 
-   }
-   else{
+  }
+  else {
 
     alert("Invalid Coupon ");
-   }
+  }
 
 
 
