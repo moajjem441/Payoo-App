@@ -3,7 +3,6 @@ isCoupon=false
 
 document.getElementById("bonus-btn").addEventListener('click',()=>{
 
-    console.log("button clicked")
 
    const coupon=getValueFromInput('user-coupon');
    console.log(coupon)
@@ -36,7 +35,7 @@ document.getElementById("bonus-btn").addEventListener('click',()=>{
               <div class="details">
                  <h1 class="text-xl text-gray-600 font-bold">Get Bonus</h1>
 
-                <p> Money 500$ Bonus Money Added Successfully
+                <p> 500$ Bonus  Added Successfully
                  at ${Date()} </p>
 
               </div>

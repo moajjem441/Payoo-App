@@ -38,6 +38,7 @@ function showOnly(id)
     const cashout=document.getElementById("cashout");
     const transferMoney=document.getElementById("transfer-money"); 
     const getBonus=document.getElementById("get-bonus-section"); 
+    const payBill=document.getElementById("Pay-bill"); 
     
 
 
@@ -46,6 +47,7 @@ function showOnly(id)
     cashout.classList.add("hidden");
     transferMoney.classList.add("hidden");
     getBonus.classList.add("hidden");
+    payBill.classList.add("hidden");
 
 
 
