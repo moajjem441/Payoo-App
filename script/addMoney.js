@@ -84,7 +84,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
               <div class="details">
                  <h1 class="text-xl text-gray-600 font-bold">Added Money</h1>
 
-                <p> Money ${amount} $ Add Successfully
+                <p> ${amount} $ Added Successfully
                  at ${Date()} </p>
 
               </div>

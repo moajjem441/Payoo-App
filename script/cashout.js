@@ -35,7 +35,7 @@ document.getElementById("cashout-money-btn").addEventListener("click",function()
               <div class="details">
                  <h1 class="text-xl text-gray-600 font-bold">Cashout Money</h1>
 
-                <p> Money ${amount} $ Cashout Successfully
+                <p> ${amount} $ Cashout Successfully
                  at ${Date()} </p>
 
               </div>
